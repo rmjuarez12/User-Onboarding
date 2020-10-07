@@ -10,7 +10,9 @@ function App() {
   const [serverError, setServerError] = useState(null);
 
   // Set a state for the post data
-  const [post, setPost] = useState([]);
+  const [post, setPost] = useState(null);
+
+  console.log(serverError);
 
   // Handle form submission
   const formSubmission = (userData) => {
@@ -34,7 +36,7 @@ function App() {
     <div className="App">
       <Form formSubmission={formSubmission} />
 
-      <pre>{JSON.stringify(post, null, 2)}</pre>
+      {post !== null && <pre>{JSON.stringify(post, null, 2)}</pre>}
     </div>
   );
 }
