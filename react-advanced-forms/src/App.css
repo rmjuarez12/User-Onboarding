@@ -8,6 +8,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+pre {
+  color: white;
+}
+
 h1,
 h2,
 h3,
@@ -28,9 +32,8 @@ button {
 .App {
   width: 80%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
   padding-top: 20px;
+  text-align: center;
 }
 
 /* Form styles */
@@ -40,6 +43,7 @@ button {
   background: #ebebeb;
   padding: 20px;
   border-radius: 5px;
+  margin: 0 auto 20px;
 }
 
 .signup-form h3 {
@@ -53,6 +57,18 @@ button {
   width: 100%;
   margin-bottom: 15px;
   font-size: 18px;
+  position: relative;
+}
+
+.signup-form label .error-mssg {
+  position: absolute;
+  top: 10%;
+  left: 300px;
+  width: 200px;
+  background: #eb4d4b;
+  color: white;
+  padding: 10px;
+  display: block;
 }
 
 .signup-form input {
@@ -63,6 +79,7 @@ button {
   margin-top: 5px;
   width: 100%;
   font-size: 18px;
+  transition: 0.3s all;
 }
 
 .signup-form .terms input {
@@ -82,4 +99,20 @@ button {
   border: none;
   font-size: 20px;
   cursor: pointer;
+}
+
+.signup-form button:disabled {
+  opacity: 0.5;
+  cursor: auto !important;
+  background: #eb4d4b;
+}
+
+.signup-form .invalid input {
+  background: #eb4d4b;
+  color: white;
+}
+
+.signup-form .terms.invalid {
+  border: #eb4d4b 1px solid;
+  padding: 5px;
 }
