@@ -1,0 +1,118 @@
+/* Import fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+/* General Elements */
+body {
+  background: #130f40;
+  font-family: "Roboto", sans-serif;
+}
+
+pre {
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  transition: 0.3s all;
+  text-decoration: none;
+}
+
+button {
+  transition: 0.3s all;
+}
+
+.App {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* Form styles */
+
+.signup-form {
+  width: 300px;
+  background: #ebebeb;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto 20px;
+}
+
+.signup-form h3 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-form label {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+}
+
+.signup-form label .error-mssg {
+  position: absolute;
+  top: 10%;
+  left: 300px;
+  width: 200px;
+  background: #eb4d4b;
+  color: white;
+  padding: 10px;
+  display: block;
+}
+
+.signup-form input {
+  display: block;
+  background: white;
+  border: #30336b 2px solid;
+  padding: 5px 15px;
+  margin-top: 5px;
+  width: 100%;
+  font-size: 18px;
+  transition: 0.3s all;
+}
+
+.signup-form .terms input {
+  display: inline-block;
+  width: auto !important;
+  margin-top: 0 !important;
+}
+
+.signup-form button {
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background: #6ab04c;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.signup-form button:disabled {
+  opacity: 0.5;
+  cursor: auto !important;
+  background: #eb4d4b;
+}
+
+.signup-form .invalid input {
+  background: #eb4d4b;
+  color: white;
+}
+
+.signup-form .terms.invalid {
+  border: #eb4d4b 1px solid;
+  padding: 5px;
+}
